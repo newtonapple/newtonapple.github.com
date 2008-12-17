@@ -11,11 +11,9 @@ filter:    erb
    <title><%= @page.title %></title>
    <meta name="author" content="<%= @page.author %>" />
 
-   <!-- CodeRay syntax highlighting CSS -->
-   <link rel="stylesheet" href="/css/coderay.css" type="text/css" />
-   <link rel="stylesheet" href="/css/twilight.css" type="text/css" />
-   <!-- Homepage CSS -->
-   <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen, projection" />
+   <link rel="stylesheet" href="css/coderay.css" type="text/css" />
+   <link rel="stylesheet" href="css/twilight.css" type="text/css" />
+   <link rel="stylesheet" href="css/site.css" type="text/css" media="screen, projection" />
 </head>
 <body>
 
