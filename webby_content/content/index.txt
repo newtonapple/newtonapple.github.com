@@ -6,7 +6,7 @@ filter:
   - erb
   - textile
 ---
-p(title). <%= @page.title %>
+p(title). "<%= @page.title %>":http://github.com/newtonapple/newtonapple.github.com/tree/master
 
 h3. "Webby":http://webby.rubyforge.org and git might be a match made in heaven!
 
