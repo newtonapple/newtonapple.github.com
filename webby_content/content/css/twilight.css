@@ -1,7 +1,13 @@
 ---
 directory: '../../css/'
 extension: css
+layout:    nil
 ---
+pre.twilight {
+    font-size: 12pt;
+    padding: 10px;
+}
+
 pre.twilight .DiffInserted {
    background-color: #253B22;
    color: #F8F8F8;

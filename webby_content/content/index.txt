@@ -8,7 +8,7 @@ filter:
 ---
 p(title). <%= @page.title %>
 
-h3. Webby and Git git might be a match made in heaven!
+h3. "Webby":http://webby.rubyforge.org and git might be a match made in heaven!
 
 h4. Code Ray
 

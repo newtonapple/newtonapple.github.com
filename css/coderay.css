@@ -1,20 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title></title>
-   <meta name="author" content="" />
-
-   <link rel="stylesheet" href="css/coderay.css" type="text/css" />
-   <link rel="stylesheet" href="css/twilight.css" type="text/css" />
-   <link rel="stylesheet" href="css/site.css" type="text/css" media="screen, projection" />
-</head>
-<body>
-
-<div class="container">
-    .CodeRay {
+.CodeRay {
   padding: 0.5em;
   margin-bottom: 1.3em;
   background-color: #eee;
@@ -29,8 +13,6 @@
   background-color: transparent;
   border: none;
 }
-
-div.CodeRay { }
 
 span.CodeRay { white-space: pre; border: 0px; padding: 2px }
 
@@ -125,13 +107,3 @@ ol.CodeRay li { white-space: pre }
 .CodeRay .ty { color:#339; font-weight:bold }
 .CodeRay .v  { color:#036 }
 .CodeRay .xt { color:#444 }
-
-
-   <div id="footer">
-     <hr />
-     <p>This website was created with <a href="http://webby.rubyforge.org">Webby</a></p>
-   </div>
-
-</div>
-</body>
-</html>

@@ -1,6 +1,7 @@
 ---
 directory: '../../css/'
 extension: css
+layout:    nil
 ---
 .CodeRay {
   padding: 0.5em;
@@ -17,8 +18,6 @@ extension: css
   background-color: transparent;
   border: none;
 }
-
-div.CodeRay { }
 
 span.CodeRay { white-space: pre; border: 0px; padding: 2px }
 
