@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Git Source?</title>
+   <meta name="author" content="" />
+
+   <!-- CodeRay syntax highlighting CSS -->
+   <link rel="stylesheet" href="css/coderay.css" type="text/css" />
+   <link rel="stylesheet" href="css/twilight.css" type="text/css" />
+   <!-- Homepage CSS -->
+   <link rel="stylesheet" href="css/site.css" type="text/css" media="screen, projection" />
+</head>
+<body>
+
+<div class="container">
+    <p class="title">Git Source?</p>
+<h3>Webby and Git git might be a match made in heaven!</h3>
+<h4>Code Ray</h4>
+<div class="CodeRay"><pre><span class="no"> 1</span> <span class="r">module</span> <span class="cl">Flip</span>; <span class="gv">$KCODE</span> = <span class="s"><span class="dl">&quot;</span><span class="k">u</span><span class="dl">&quot;</span></span>
+<span class="no"> 2</span>    <span class="co">FLIP_MAP</span> = <span class="co">Hash</span>.new{|h,k| k}
+<span class="no"> 3</span>  
+<span class="no"> 4</span>    { <span class="s"><span class="dl">'</span><span class="k">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz</span><span class="dl">'</span></span> =&gt;
+<span class="no"> 5</span>       <span class="s"><span class="dl">'</span><span class="k">∀ᗺↃᗡƎℲ⅁HIᒋʞ⅂ƜNOdԾᖈS⊥ႶΛMX⅄Zɐqɔpǝɟɓɥᴉʞ│ɯuodbɹsʇnʌʍxʎz</span><span class="dl">'</span></span>,
+<span class="no"> 6</span>       <span class="s"><span class="dl">'</span><span class="k">123456890~!@$%^&amp;*()_+{}:|&lt;&gt;?&quot;#`[],./-=</span><span class="ch">\\</span><span class="dl">'</span></span> =&gt;
+<span class="no"> 7</span>       <span class="s"><span class="dl">'</span><span class="k">|ᘔᗴhᔕ9860~¡Ꭷ$%⋁⅋*)(‾+}{:|&gt;&lt;¿„#ˎ][‘˙/-=</span><span class="ch">\\</span><span class="dl">'</span></span>
+<span class="no"> 8</span>    }.each {|from,to| from.split(<span class="rx"><span class="dl">/</span><span class="dl">/</span></span>).zip(to.split(<span class="rx"><span class="dl">/</span><span class="dl">/</span></span>)).each {|f,t| <span class="co">FLIP_MAP</span>[f]=t }}
+<span class="no"> 9</span>    <span class="co">FLIP_MAP</span>.merge!(<span class="s"><span class="dl">&quot;</span><span class="k">'</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">,</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">7</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">/̲</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">j</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">⌠̣</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">;</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">:́</span><span class="dl">'</span></span>)
+<span class="no"><strong>10</strong></span>  
+<span class="no">11</span>    <span class="r">def</span> <span class="fu">flip</span>
+<span class="no">12</span>       <span class="co">FLIP_MAP</span>.values_at(* split(<span class="rx"><span class="dl">/</span><span class="dl">/</span></span>)).join
+<span class="no">13</span>    <span class="r">end</span>
+<span class="no">14</span> <span class="r">end</span>
+<span class="no">15</span>  
+<span class="no">16</span>  
+<span class="no">17</span> <span class="r">class</span> <span class="cl">String</span>
+<span class="no">18</span>   include <span class="co">Flip</span>
+<span class="no">19</span> <span class="r">end</span>
+<span class="no"><strong>20</strong></span>  
+<span class="no">21</span>  
+<span class="no">22</span> <span class="s"><span class="dl">'</span><span class="k">:)</span><span class="dl">'</span></span>.flip <span class="c"># &quot;:(&quot;</span>
+</pre></div><h4>Ultraviolet</h4>
+<div class="UltraViolet"><pre class="twilight"><span class="line-numbers">   1 </span> <span class="Keyword">module</span> <span class="Entity">Flip</span>; <span class="Variable"><span class="Variable">$</span>KCODE</span> <span class="Keyword">=</span> <span class="String"><span class="String">&quot;</span>u<span class="String">&quot;</span></span>
+<span class="line-numbers">   2 </span>    <span class="Variable">FLIP_MAP</span> <span class="Keyword">=</span> <span class="Support">Hash</span>.<span class="Entity">new</span>{|<span class="Variable">h</span>,<span class="Variable">k</span>| k}
+<span class="line-numbers">   3 </span>  
+<span class="line-numbers">   4 </span>    { <span class="String"><span class="String">'</span>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz<span class="String">'</span></span> =&gt;
+<span class="line-numbers">   5 </span>       <span class="String"><span class="String">'</span>∀ᗺↃᗡƎℲ⅁HIᒋʞ⅂ƜNOdԾᖈS⊥ႶΛMX⅄Zɐqɔpǝɟɓɥᴉʞ│ɯuodbɹsʇnʌʍxʎz<span class="String">'</span></span>,
+<span class="line-numbers">   6 </span>       <span class="String"><span class="String">'</span>123456890~!@$%^&amp;*()_+{}:|&lt;&gt;?&quot;#`[],./-=<span class="StringConstant">\\</span><span class="String">'</span></span> =&gt;
+<span class="line-numbers">   7 </span>       <span class="String"><span class="String">'</span>|ᘔᗴhᔕ9860~¡Ꭷ$%⋁⅋*)(‾+}{:|&gt;&lt;¿„#ˎ][‘˙/-=<span class="StringConstant">\\</span><span class="String">'</span></span>
+<span class="line-numbers">   8 </span>    }.<span class="Entity">each</span> {|<span class="Variable">from</span>,<span class="Variable">to</span>| from.<span class="Entity">split</span>(<span class="StringRegexp"><span class="StringRegexp">/</span></span><span class="StringRegexp"></span><span class="StringRegexp"><span class="StringRegexp">/</span></span>).<span class="Entity">zip</span>(to.<span class="Entity">split</span>(<span class="StringRegexp"><span class="StringRegexp">/</span></span><span class="StringRegexp"></span><span class="StringRegexp"><span class="StringRegexp">/</span></span>)).<span class="Entity">each</span> {|<span class="Variable">f</span>,<span class="Variable">t</span>| <span class="Variable">FLIP_MAP</span>[f]<span class="Keyword">=</span>t }}
+<span class="line-numbers">   9 </span>    <span class="Variable">FLIP_MAP</span>.<span class="Entity">merge!</span>(<span class="String"><span class="String">&quot;</span>'<span class="String">&quot;</span></span>=&gt;<span class="String"><span class="String">'</span>,<span class="String">'</span></span>, <span class="String"><span class="String">'</span>7<span class="String">'</span></span>=&gt;<span class="String"><span class="String">'</span>/̲<span class="String">'</span></span>, <span class="String"><span class="String">'</span>j<span class="String">'</span></span>=&gt;<span class="String"><span class="String">'</span>⌠̣<span class="String">'</span></span>, <span class="String"><span class="String">'</span>;<span class="String">'</span></span>=&gt;<span class="String"><span class="String">'</span>:́<span class="String">'</span></span>)
+<span class="line-numbers">  10 </span>  
+<span class="line-numbers">  11 </span>    <span class="Keyword">def</span> <span class="Entity">flip</span>
+<span class="line-numbers">  12 </span>       <span class="Variable">FLIP_MAP</span>.<span class="Entity">values_at</span>(<span class="Keyword">*</span> <span class="Entity">split</span>(<span class="StringRegexp"><span class="StringRegexp">/</span></span><span class="StringRegexp"></span><span class="StringRegexp"><span class="StringRegexp">/</span></span>)).<span class="Entity">join</span>
+<span class="line-numbers">  13 </span>    <span class="Keyword">end</span>
+<span class="line-numbers">  14 </span> <span class="Keyword">end</span>
+<span class="line-numbers">  15 </span>  
+<span class="line-numbers">  16 </span>  
+<span class="line-numbers">  17 </span> <span class="Keyword">class</span> <span class="Entity">String</span>
+<span class="line-numbers">  18 </span>   <span class="Keyword">include</span> <span class="Variable">Flips</span>
+<span class="line-numbers">  19 </span> <span class="Keyword">end</span>
+<span class="line-numbers">  20 </span>  
+<span class="line-numbers">  21 </span>  
+<span class="line-numbers">  22 </span> <span class="String"><span class="String">'</span>:)<span class="String">'</span></span>.<span class="Entity">flip</span> <span class="Comment"><span class="Comment">#</span> &quot;:(&quot;</span>
+</pre></div>
+
+   <div id="footer">
+     <hr />
+     <p>This website was created with <a href="http://webby.rubyforge.org">Webby</a></p>
+   </div>
+
+</div>
+</body>
+</html>
