@@ -21,89 +21,116 @@
     <div class='header'></div>
 
     <div class='content'>
-        <h2>Newton&#8217;s Reference</h2>
+        <h1>Newton&#8217;s Reference</h1>
 <h3><a href="http://webby.rubyforge.org">Webby</a> and git might be a match made in heaven!</h3>
-<h4>Code Ray<br />
+<h2>Code Ray</h2>
+<div class="CodeRay"><pre>  <span class="r">module</span> <span class="cl">Flip</span>; <span class="gv">$KCODE</span> = <span class="s"><span class="dl">&quot;</span><span class="k">u</span><span class="dl">&quot;</span></span>
+     <span class="co">FLIP_MAP</span> = <span class="co">Hash</span>.new{|h,k| k}
+ 
+     { <span class="s"><span class="dl">'</span><span class="k">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz</span><span class="dl">'</span></span> =&gt;
+        <span class="s"><span class="dl">'</span><span class="k">∀ᗺↃᗡƎℲ⅁HIᒋʞ⅂ƜNOdԾᖈS⊥ႶΛMX⅄Zɐqɔpǝɟɓɥᴉʞ│ɯuodbɹsʇnʌʍxʎz</span><span class="dl">'</span></span>,
+        <span class="s"><span class="dl">'</span><span class="k">123456890~!@$%^&amp;*()_+{}:|&lt;&gt;?&quot;#`[],./-=</span><span class="ch">\\</span><span class="dl">'</span></span> =&gt;
+        <span class="s"><span class="dl">'</span><span class="k">|ᘔᗴhᔕ9860~¡Ꭷ$%⋁⅋*)(‾+}{:|&gt;&lt;¿„#ˎ][‘˙/-=</span><span class="ch">\\</span><span class="dl">'</span></span>
+     }.each {|from,to| from.split(<span class="rx"><span class="dl">/</span><span class="dl">/</span></span>).zip(to.split(<span class="rx"><span class="dl">/</span><span class="dl">/</span></span>)).each {|f,t| <span class="co">FLIP_MAP</span>[f]=t }}
+     <span class="co">FLIP_MAP</span>.merge!(<span class="s"><span class="dl">&quot;</span><span class="k">'</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">,</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">7</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">/̲</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">j</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">⌠̣</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">;</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">:́</span><span class="dl">'</span></span>)
+ 
+     <span class="r">def</span> <span class="fu">flip</span>
+        <span class="co">FLIP_MAP</span>.values_at(* split(<span class="rx"><span class="dl">/</span><span class="dl">/</span></span>)).join
+     <span class="r">end</span>
+  <span class="r">end</span>
+ 
+ 
+  <span class="r">class</span> <span class="cl">String</span>
+    include <span class="co">Flip</span>
+  <span class="r">end</span>
+ 
+ 
+  <span class="s"><span class="dl">'</span><span class="k">:)</span><span class="dl">'</span></span>.flip <span class="c"># &quot;:(&quot;</span>
+</pre></div><h2>Ultraviolet</h2>
+<div class="UltraViolet"><pre class="twilight">  <span class="Keyword">module</span> <span class="Entity">Flip</span>; <span class="Variable"><span class="Variable">$</span>KCODE</span> <span class="Keyword">=</span> <span class="String"><span class="String">&quot;</span>u<span class="String">&quot;</span></span>
+     <span class="Variable">FLIP_MAP</span> <span class="Keyword">=</span> <span class="Support">Hash</span>.<span class="Entity">new</span>{|<span class="Variable">h</span>,<span class="Variable">k</span>| k}
+ 
+     { <span class="String"><span class="String">'</span>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz<span class="String">'</span></span> =&gt;
+        <span class="String"><span class="String">'</span>∀ᗺↃᗡƎℲ⅁HIᒋʞ⅂ƜNOdԾᖈS⊥ႶΛMX⅄Zɐqɔpǝɟɓɥᴉʞ│ɯuodbɹsʇnʌʍxʎz<span class="String">'</span></span>,
+        <span class="String"><span class="String">'</span>123456890~!@$%^&amp;*()_+{}:|&lt;&gt;?&quot;#`[],./-=<span class="StringConstant">\\</span><span class="String">'</span></span> =&gt;
+        <span class="String"><span class="String">'</span>|ᘔᗴhᔕ9860~¡Ꭷ$%⋁⅋*)(‾+}{:|&gt;&lt;¿„#ˎ][‘˙/-=<span class="StringConstant">\\</span><span class="String">'</span></span>
+     }.<span class="Entity">each</span> {|<span class="Variable">from</span>,<span class="Variable">to</span>| from.<span class="Entity">split</span>(<span class="StringRegexp"><span class="StringRegexp">/</span></span><span class="StringRegexp"></span><span class="StringRegexp"><span class="StringRegexp">/</span></span>).<span class="Entity">zip</span>(to.<span class="Entity">split</span>(<span class="StringRegexp"><span class="StringRegexp">/</span></span><span class="StringRegexp"></span><span class="StringRegexp"><span class="StringRegexp">/</span></span>)).<span class="Entity">each</span> {|<span class="Variable">f</span>,<span class="Variable">t</span>| <span class="Variable">FLIP_MAP</span>[f]<span class="Keyword">=</span>t }}
+     <span class="Variable">FLIP_MAP</span>.<span class="Entity">merge!</span>(<span class="String"><span class="String">&quot;</span>'<span class="String">&quot;</span></span>=&gt;<span class="String"><span class="String">'</span>,<span class="String">'</span></span>, <span class="String"><span class="String">'</span>7<span class="String">'</span></span>=&gt;<span class="String"><span class="String">'</span>/̲<span class="String">'</span></span>, <span class="String"><span class="String">'</span>j<span class="String">'</span></span>=&gt;<span class="String"><span class="String">'</span>⌠̣<span class="String">'</span></span>, <span class="String"><span class="String">'</span>;<span class="String">'</span></span>=&gt;<span class="String"><span class="String">'</span>:́<span class="String">'</span></span>)
+ 
+     <span class="Keyword">def</span> <span class="Entity">flip</span>
+        <span class="Variable">FLIP_MAP</span>.<span class="Entity">values_at</span>(<span class="Keyword">*</span> <span class="Entity">split</span>(<span class="StringRegexp"><span class="StringRegexp">/</span></span><span class="StringRegexp"></span><span class="StringRegexp"><span class="StringRegexp">/</span></span>)).<span class="Entity">join</span>
+     <span class="Keyword">end</span>
+  <span class="Keyword">end</span>
+ 
+ 
+  <span class="Keyword">class</span> <span class="Entity">String</span>
+    <span class="Keyword">include</span> <span class="Variable">Flips</span>
+  <span class="Keyword">end</span>
+ 
+ 
+  <span class="String"><span class="String">'</span>:)<span class="String">'</span></span>.<span class="Entity">flip</span> <span class="Comment"><span class="Comment">#</span> &quot;:(&quot;</span>
+</pre></div><h2>Graphviz</h2>
+<h3>Directed Graphs</h3>
+<img src="/images/abc.png" /><h4>code:</h4>
+<div class="UltraViolet"><pre class="twilight">  <span class="Storage">digraph</span> abc {
+    a -&gt; b -&gt; c
+    a -&gt; c
+  }
+</pre></div><img src="/images/G.png" /><h4>code:</h4>
+<div class="UltraViolet"><pre class="twilight">  <span class="Storage">digraph</span> G { 
+    <span class="SupportConstant">compound</span>=true; 
+    <span class="Storage">subgraph</span> cluster0 { 
+      a -&gt; b; 
+      a -&gt; c; 
+      b -&gt; d; 
+      c -&gt; d; 
+    } 
+    <span class="Storage">subgraph</span> cluster1 { 
+      e -&gt; g; 
+      e -&gt; f; 
+    } 
+    b -&gt; f [<span class="SupportConstant">lhead</span>=cluster1]; 
+    d -&gt; e; 
+    c -&gt; g [<span class="SupportConstant">ltail</span>=cluster0, 
+    <span class="SupportConstant">lhead</span>=cluster1]; 
+    c -&gt; e [<span class="SupportConstant">ltail</span>=cluster0]; 
+    d -&gt; h; 
+}
+</pre></div><h3>Struct</h3>
+<img src="/images/structs.png" /><h4>code:</h4>
+<div class="UltraViolet"><pre class="twilight">  <span class="Storage">digraph</span> structs { 
+    <span class="Storage">node</span> [<span class="SupportConstant">shape</span>=record]; 
+    struct1 [<span class="SupportConstant">shape</span>=record,<span class="SupportConstant">label</span>=<span class="String"><span class="String">&quot;</span>&lt;f0&gt; left|&lt;f1&gt; middle|&lt;f2&gt; right<span class="String">&quot;</span></span>]; 
+    struct2 [<span class="SupportConstant">shape</span>=record,<span class="SupportConstant">label</span>=<span class="String"><span class="String">&quot;</span>&lt;f0&gt; one|&lt;f1&gt; two<span class="String">&quot;</span></span>]; 
+    struct3 [<span class="SupportConstant">shape</span>=record,<span class="SupportConstant">label</span>=<span class="String"><span class="String">&quot;</span>hello<span class="StringConstant">\n</span>world |{ b |{c|&lt;here&gt; d|e}| f}| g | h<span class="String">&quot;</span></span>]; 
+    struct1:f1 -&gt; struct2:f0; 
+    struct1:f2 -&gt; struct3:here; 
+  }
+</pre></div><h3>Entity-Relation Map</h3>
+<img src="/images/ER.png" /><h4>code:</h4>
+<div class="UltraViolet"><pre class="twilight">  <span class="Storage">graph</span> ER {
+  	<span class="Storage">node</span> [<span class="SupportConstant">shape</span>=box]; course; institute; student;
+  	<span class="Storage">node</span> [<span class="SupportConstant">shape</span>=ellipse]; {<span class="Storage">node</span> [<span class="SupportConstant">label</span>=<span class="String"><span class="String">&quot;</span>name<span class="String">&quot;</span></span>] name0; name1; name2;}
+  		code; grade; number;
+  	<span class="Storage">node</span> [<span class="SupportConstant">shape</span>=diamond,<span class="SupportConstant">style</span>=filled,<span class="SupportConstant">color</span>=lightgrey]; <span class="String"><span class="String">&quot;</span>C-I<span class="String">&quot;</span></span>; <span class="String"><span class="String">&quot;</span>S-C<span class="String">&quot;</span></span>; <span class="String"><span class="String">&quot;</span>S-I<span class="String">&quot;</span></span>;
 
-<div class="CodeRay"><pre><span class="no"> 1</span> <span class="r">module</span> <span class="cl">Flip</span>; <span class="gv">$KCODE</span> = <span class="s"><span class="dl">&quot;</span><span class="k">u</span><span class="dl">&quot;</span></span>
-<span class="no"> 2</span>    <span class="co">FLIP_MAP</span> = <span class="co">Hash</span>.new{|h,k| k}
-<span class="no"> 3</span>  
-<span class="no"> 4</span>    { <span class="s"><span class="dl">'</span><span class="k">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz</span><span class="dl">'</span></span> =&gt;
-<span class="no"> 5</span>       <span class="s"><span class="dl">'</span><span class="k">∀ᗺↃᗡƎℲ⅁HIᒋʞ⅂ƜNOdԾᖈS⊥ႶΛMX⅄Zɐqɔpǝɟɓɥᴉʞ│ɯuodbɹsʇnʌʍxʎz</span><span class="dl">'</span></span>,
-<span class="no"> 6</span>       <span class="s"><span class="dl">'</span><span class="k">123456890~!@$%^&amp;*()_+{}:|&lt;&gt;?&quot;#`[],./-=</span><span class="ch">\\</span><span class="dl">'</span></span> =&gt;
-<span class="no"> 7</span>       <span class="s"><span class="dl">'</span><span class="k">|ᘔᗴhᔕ9860~¡Ꭷ$%⋁⅋*)(‾+}{:|&gt;&lt;¿„#ˎ][‘˙/-=</span><span class="ch">\\</span><span class="dl">'</span></span>
-<span class="no"> 8</span>    }.each {|from,to| from.split(<span class="rx"><span class="dl">/</span><span class="dl">/</span></span>).zip(to.split(<span class="rx"><span class="dl">/</span><span class="dl">/</span></span>)).each {|f,t| <span class="co">FLIP_MAP</span>[f]=t }}
-<span class="no"> 9</span>    <span class="co">FLIP_MAP</span>.merge!(<span class="s"><span class="dl">&quot;</span><span class="k">'</span><span class="dl">&quot;</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">,</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">7</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">/̲</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">j</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">⌠̣</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">;</span><span class="dl">'</span></span>=&gt;<span class="s"><span class="dl">'</span><span class="k">:́</span><span class="dl">'</span></span>)
-<span class="no"><strong>10</strong></span>  
-<span class="no">11</span>    <span class="r">def</span> <span class="fu">flip</span>
-<span class="no">12</span>       <span class="co">FLIP_MAP</span>.values_at(* split(<span class="rx"><span class="dl">/</span><span class="dl">/</span></span>)).join
-<span class="no">13</span>    <span class="r">end</span>
-<span class="no">14</span> <span class="r">end</span>
-<span class="no">15</span>  
-<span class="no">16</span>  
-<span class="no">17</span> <span class="r">class</span> <span class="cl">String</span>
-<span class="no">18</span>   include <span class="co">Flip</span>
-<span class="no">19</span> <span class="r">end</span>
-<span class="no"><strong>20</strong></span>  
-<span class="no">21</span>  
-<span class="no">22</span> <span class="s"><span class="dl">'</span><span class="k">:)</span><span class="dl">'</span></span>.flip <span class="c"># &quot;:(&quot;</span>
-</pre></div>
-</h4>
-<h4>Ultraviolet<br />
+  	name0 -- course;
+  	code -- course;
+  	course -- <span class="String"><span class="String">&quot;</span>C-I<span class="String">&quot;</span></span> [<span class="SupportConstant">label</span>=<span class="String"><span class="String">&quot;</span>n<span class="String">&quot;</span></span>,len=1.00];
+  	<span class="String"><span class="String">&quot;</span>C-I<span class="String">&quot;</span></span> -- institute [<span class="SupportConstant">label</span>=<span class="String"><span class="String">&quot;</span>1<span class="String">&quot;</span></span>,len=1.00];
+  	institute -- name1;
+  	institute -- <span class="String"><span class="String">&quot;</span>S-I<span class="String">&quot;</span></span> [<span class="SupportConstant">label</span>=<span class="String"><span class="String">&quot;</span>1<span class="String">&quot;</span></span>,len=1.00];
+  	<span class="String"><span class="String">&quot;</span>S-I<span class="String">&quot;</span></span> -- student [<span class="SupportConstant">label</span>=<span class="String"><span class="String">&quot;</span>n<span class="String">&quot;</span></span>,len=1.00];
+  	student -- grade;
+  	student -- name2;
+  	student -- number;
+  	student -- <span class="String"><span class="String">&quot;</span>S-C<span class="String">&quot;</span></span> [<span class="SupportConstant">label</span>=<span class="String"><span class="String">&quot;</span>m<span class="String">&quot;</span></span>,len=1.00];
+  	<span class="String"><span class="String">&quot;</span>S-C<span class="String">&quot;</span></span> -- course [<span class="SupportConstant">label</span>=<span class="String"><span class="String">&quot;</span>n<span class="String">&quot;</span></span>,len=1.00];
 
-<div class="UltraViolet"><pre class="twilight"><span class="line-numbers">   1 </span> <span class="Keyword">module</span> <span class="Entity">Flip</span>; <span class="Variable"><span class="Variable">$</span>KCODE</span> <span class="Keyword">=</span> <span class="String"><span class="String">&quot;</span>u<span class="String">&quot;</span></span>
-<span class="line-numbers">   2 </span>    <span class="Variable">FLIP_MAP</span> <span class="Keyword">=</span> <span class="Support">Hash</span>.<span class="Entity">new</span>{|<span class="Variable">h</span>,<span class="Variable">k</span>| k}
-<span class="line-numbers">   3 </span>  
-<span class="line-numbers">   4 </span>    { <span class="String"><span class="String">'</span>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz<span class="String">'</span></span> =&gt;
-<span class="line-numbers">   5 </span>       <span class="String"><span class="String">'</span>∀ᗺↃᗡƎℲ⅁HIᒋʞ⅂ƜNOdԾᖈS⊥ႶΛMX⅄Zɐqɔpǝɟɓɥᴉʞ│ɯuodbɹsʇnʌʍxʎz<span class="String">'</span></span>,
-<span class="line-numbers">   6 </span>       <span class="String"><span class="String">'</span>123456890~!@$%^&amp;*()_+{}:|&lt;&gt;?&quot;#`[],./-=<span class="StringConstant">\\</span><span class="String">'</span></span> =&gt;
-<span class="line-numbers">   7 </span>       <span class="String"><span class="String">'</span>|ᘔᗴhᔕ9860~¡Ꭷ$%⋁⅋*)(‾+}{:|&gt;&lt;¿„#ˎ][‘˙/-=<span class="StringConstant">\\</span><span class="String">'</span></span>
-<span class="line-numbers">   8 </span>    }.<span class="Entity">each</span> {|<span class="Variable">from</span>,<span class="Variable">to</span>| from.<span class="Entity">split</span>(<span class="StringRegexp"><span class="StringRegexp">/</span></span><span class="StringRegexp"></span><span class="StringRegexp"><span class="StringRegexp">/</span></span>).<span class="Entity">zip</span>(to.<span class="Entity">split</span>(<span class="StringRegexp"><span class="StringRegexp">/</span></span><span class="StringRegexp"></span><span class="StringRegexp"><span class="StringRegexp">/</span></span>)).<span class="Entity">each</span> {|<span class="Variable">f</span>,<span class="Variable">t</span>| <span class="Variable">FLIP_MAP</span>[f]<span class="Keyword">=</span>t }}
-<span class="line-numbers">   9 </span>    <span class="Variable">FLIP_MAP</span>.<span class="Entity">merge!</span>(<span class="String"><span class="String">&quot;</span>'<span class="String">&quot;</span></span>=&gt;<span class="String"><span class="String">'</span>,<span class="String">'</span></span>, <span class="String"><span class="String">'</span>7<span class="String">'</span></span>=&gt;<span class="String"><span class="String">'</span>/̲<span class="String">'</span></span>, <span class="String"><span class="String">'</span>j<span class="String">'</span></span>=&gt;<span class="String"><span class="String">'</span>⌠̣<span class="String">'</span></span>, <span class="String"><span class="String">'</span>;<span class="String">'</span></span>=&gt;<span class="String"><span class="String">'</span>:́<span class="String">'</span></span>)
-<span class="line-numbers">  10 </span>  
-<span class="line-numbers">  11 </span>    <span class="Keyword">def</span> <span class="Entity">flip</span>
-<span class="line-numbers">  12 </span>       <span class="Variable">FLIP_MAP</span>.<span class="Entity">values_at</span>(<span class="Keyword">*</span> <span class="Entity">split</span>(<span class="StringRegexp"><span class="StringRegexp">/</span></span><span class="StringRegexp"></span><span class="StringRegexp"><span class="StringRegexp">/</span></span>)).<span class="Entity">join</span>
-<span class="line-numbers">  13 </span>    <span class="Keyword">end</span>
-<span class="line-numbers">  14 </span> <span class="Keyword">end</span>
-<span class="line-numbers">  15 </span>  
-<span class="line-numbers">  16 </span>  
-<span class="line-numbers">  17 </span> <span class="Keyword">class</span> <span class="Entity">String</span>
-<span class="line-numbers">  18 </span>   <span class="Keyword">include</span> <span class="Variable">Flips</span>
-<span class="line-numbers">  19 </span> <span class="Keyword">end</span>
-<span class="line-numbers">  20 </span>  
-<span class="line-numbers">  21 </span>  
-<span class="line-numbers">  22 </span> <span class="String"><span class="String">'</span>:)<span class="String">'</span></span>.<span class="Entity">flip</span> <span class="Comment"><span class="Comment">#</span> &quot;:(&quot;</span>
-</pre></div>
-</h4>
-<h4>Graphiz</h4>
-<h5>Directed Graphs<br />
-
-<img src="/images/abc.png" usemap="#abc" />
-<map id="abc" name="abc">
-<area shape="poly" href="a.html" title="a" alt="" coords="91,30 92,37 98,44 106,49 116,52 127,54 138,52 148,49 156,44 161,37 163,30 161,22 156,16 148,10 138,7 127,6 116,7 106,10 98,16 92,22"/>
-<area shape="poly" href="b.html" title="b" alt="" coords="5,126 7,133 12,140 20,145 30,148 41,150 52,148 62,145 70,140 76,133 77,126 76,118 70,112 62,106 52,103 41,102 30,103 20,106 12,112 7,118"/>
-<area shape="poly" href="c.html" title="c" alt="" coords="91,222 92,229 98,236 106,241 116,244 127,246 138,244 148,241 156,236 161,229 163,222 161,214 156,208 148,202 138,199 127,198 116,199 106,202 98,208 92,214"/>
-<area shape="rect" href="default.html" alt="" coords="0,0,168,251"/>
-<br />
-<img src="/images/abc.png" usemap="#abc" /><br />
-<map id="abc" name="abc"><br />
-<area shape="poly" href="a.html" title="a" alt="" coords="91,30 92,37 98,44 106,49 116,52 127,54 138,52 148,49 156,44 161,37 163,30 161,22 156,16 148,10 138,7 127,6 116,7 106,10 98,16 92,22"/><br />
-<area shape="poly" href="b.html" title="b" alt="" coords="5,126 7,133 12,140 20,145 30,148 41,150 52,148 62,145 70,140 76,133 77,126 76,118 70,112 62,106 52,103 41,102 30,103 20,106 12,112 7,118"/><br />
-<area shape="poly" href="c.html" title="c" alt="" coords="91,222 92,229 98,236 106,241 116,244 127,246 138,244 148,241 156,236 161,229 163,222 161,214 156,208 148,202 138,199 127,198 116,199 106,202 98,208 92,214"/><br />
-<area shape="rect" href="default.html" alt="" coords="0,0,168,251"/><br />
-</map></h5>
-<p></notextile></p>
-<img src="/images/G.png" /><h5>Struct<br />
-
-<br />
-<img src="/images/structs.png" /></h5>
-<p></notextile></p>
-<h5>Entity-Relation Map<br />
-
-<br />
-<img src="/images/ER.png" /></h5>
-<p></notextile></p>
-<p><a href="http://github.com/newtonapple/newtonapple.github.com/tree/master">Source</a></p>
+  	<span class="SupportConstant">label</span> = <span class="String"><span class="String">&quot;</span>Entity Relation Diagram<span class="String">&quot;</span></span>;
+  	<span class="SupportConstant">fontsize</span>=20;
+  }
+</pre></div><p><a href="http://github.com/newtonapple/newtonapple.github.com/tree/master">Source</a></p>
     </div>
 
     <div class='footer'> 

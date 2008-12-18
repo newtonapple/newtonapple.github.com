@@ -5,78 +5,87 @@ filter:
   - textile
 ---
 <% content_for :header do -%>
-  <h2>Newton's Reference</h2>
+  <h1>Newton's Reference</h1>
 <% end -%>
 
 h3. "Webby":http://webby.rubyforge.org and git might be a match made in heaven!
 
-h4. Code Ray
-<% coderay :lang => 'ruby', :line_numbers => 'inline' do -%>
-module Flip; $KCODE = "u"
-   FLIP_MAP = Hash.new{|h,k| k}
+h2. Code Ray
+
+<% coderay :lang => 'ruby' do -%>
+  module Flip; $KCODE = "u"
+     FLIP_MAP = Hash.new{|h,k| k}
  
-   { 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz' =>
-      '∀ᗺↃᗡƎℲ⅁HIᒋʞ⅂ƜNOdԾᖈS⊥ႶΛMX⅄Zɐqɔpǝɟɓɥᴉʞ│ɯuodbɹsʇnʌʍxʎz',
-      '123456890~!@$%^&*()_+{}:|<>?"#`[],./-=\\' =>
-      '|ᘔᗴhᔕ9860~¡Ꭷ$%⋁⅋*)(‾+}{:|><¿„#ˎ][‘˙/-=\\'
-   }.each {|from,to| from.split(//).zip(to.split(//)).each {|f,t| FLIP_MAP[f]=t }}
-   FLIP_MAP.merge!("'"=>',', '7'=>'/̲', 'j'=>'⌠̣', ';'=>':́')
+     { 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz' =>
+        '∀ᗺↃᗡƎℲ⅁HIᒋʞ⅂ƜNOdԾᖈS⊥ႶΛMX⅄Zɐqɔpǝɟɓɥᴉʞ│ɯuodbɹsʇnʌʍxʎz',
+        '123456890~!@$%^&*()_+{}:|<>?"#`[],./-=\\' =>
+        '|ᘔᗴhᔕ9860~¡Ꭷ$%⋁⅋*)(‾+}{:|><¿„#ˎ][‘˙/-=\\'
+     }.each {|from,to| from.split(//).zip(to.split(//)).each {|f,t| FLIP_MAP[f]=t }}
+     FLIP_MAP.merge!("'"=>',', '7'=>'/̲', 'j'=>'⌠̣', ';'=>':́')
  
-   def flip
-      FLIP_MAP.values_at(* split(//)).join
-   end
-end
- 
- 
-class String
-  include Flip
-end
+     def flip
+        FLIP_MAP.values_at(* split(//)).join
+     end
+  end
  
  
-':)'.flip # ":("
+  class String
+    include Flip
+  end
+ 
+ 
+  ':)'.flip # ":("
 <% end -%>
 
 
-h4. Ultraviolet
-<% uv( :lang => "ruby", :line_numbers => true, :theme => 'twilight') do -%>
-module Flip; $KCODE = "u"
-   FLIP_MAP = Hash.new{|h,k| k}
+h2. Ultraviolet
+
+<% uv( :lang => "ruby", :theme => 'twilight') do -%>
+  module Flip; $KCODE = "u"
+     FLIP_MAP = Hash.new{|h,k| k}
  
-   { 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz' =>
-      '∀ᗺↃᗡƎℲ⅁HIᒋʞ⅂ƜNOdԾᖈS⊥ႶΛMX⅄Zɐqɔpǝɟɓɥᴉʞ│ɯuodbɹsʇnʌʍxʎz',
-      '123456890~!@$%^&*()_+{}:|<>?"#`[],./-=\\' =>
-      '|ᘔᗴhᔕ9860~¡Ꭷ$%⋁⅋*)(‾+}{:|><¿„#ˎ][‘˙/-=\\'
-   }.each {|from,to| from.split(//).zip(to.split(//)).each {|f,t| FLIP_MAP[f]=t }}
-   FLIP_MAP.merge!("'"=>',', '7'=>'/̲', 'j'=>'⌠̣', ';'=>':́')
+     { 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghiklmnopqrstuvwxyz' =>
+        '∀ᗺↃᗡƎℲ⅁HIᒋʞ⅂ƜNOdԾᖈS⊥ႶΛMX⅄Zɐqɔpǝɟɓɥᴉʞ│ɯuodbɹsʇnʌʍxʎz',
+        '123456890~!@$%^&*()_+{}:|<>?"#`[],./-=\\' =>
+        '|ᘔᗴhᔕ9860~¡Ꭷ$%⋁⅋*)(‾+}{:|><¿„#ˎ][‘˙/-=\\'
+     }.each {|from,to| from.split(//).zip(to.split(//)).each {|f,t| FLIP_MAP[f]=t }}
+     FLIP_MAP.merge!("'"=>',', '7'=>'/̲', 'j'=>'⌠̣', ';'=>':́')
  
-   def flip
-      FLIP_MAP.values_at(* split(//)).join
-   end
-end
- 
- 
-class String
-  include Flips
-end
+     def flip
+        FLIP_MAP.values_at(* split(//)).join
+     end
+  end
  
  
-':)'.flip # ":("
+  class String
+    include Flips
+  end
+ 
+ 
+  ':)'.flip # ":("
 <% end -%>
 
 
-<h4>Graphiz</h4>
+<h2>Graphviz</h2>
 
-h5. Directed Graphs
+h3. Directed Graphs
+
 <% graphviz( :path => "images", :type => "png", :cmd => "dot" ) do %>
   digraph abc {
-    graph [URL="default.html"]
-    a [URL="a.html"]
-    b [URL="b.html"]
-    c [URL="c.html"]
     a -> b -> c
-    a -> c -> a
+    a -> c
   }
 <% end %>
+
+h4. code: 
+
+<% uv( :lang => "dot", :theme => 'twilight') do -%>
+  digraph abc {
+    a -> b -> c
+    a -> c
+  }
+<% end %>
+
 
 <% graphviz( :path => "images", :type => "png", :cmd => "dot" ) do %>
   digraph G { 
@@ -100,7 +109,32 @@ h5. Directed Graphs
   }
 <% end %>
 
-h5. Struct
+h4. code: 
+
+<% uv( :lang => "dot", :theme => 'twilight') do -%>
+  digraph G { 
+    compound=true; 
+    subgraph cluster0 { 
+      a -> b; 
+      a -> c; 
+      b -> d; 
+      c -> d; 
+    } 
+    subgraph cluster1 { 
+      e -> g; 
+      e -> f; 
+    } 
+    b -> f [lhead=cluster1]; 
+    d -> e; 
+    c -> g [ltail=cluster0, 
+    lhead=cluster1]; 
+    c -> e [ltail=cluster0]; 
+    d -> h; 
+}
+<% end %>
+
+h3. Struct
+
 <% graphviz( :path => "images", :type => "png", :cmd => "dot" ) do %>
   digraph structs { 
     node [shape=record]; 
@@ -112,7 +146,22 @@ h5. Struct
   } 
 <% end %>
 
-h5. Entity-Relation Map
+h4. code: 
+
+<% uv( :lang => "dot", :theme => 'twilight') do -%>
+  digraph structs { 
+    node [shape=record]; 
+    struct1 [shape=record,label="<f0> left|<f1> middle|<f2> right"]; 
+    struct2 [shape=record,label="<f0> one|<f1> two"]; 
+    struct3 [shape=record,label="hello\nworld |{ b |{c|<here> d|e}| f}| g | h"]; 
+    struct1:f1 -> struct2:f0; 
+    struct1:f2 -> struct3:here; 
+  }
+<% end %>
+
+
+h3. Entity-Relation Map
+
 <% graphviz( :path => "images", :type => "png", :cmd => "dot" ) do %>
   graph ER {
   	node [shape=box]; course; institute; student;
@@ -133,11 +182,36 @@ h5. Entity-Relation Map
   	student -- "S-C" [label="m",len=1.00];
   	"S-C" -- course [label="n",len=1.00];
 
-  	label = "\n\nEntity Relation Diagram\ndrawn by NEATO";
+  	label = "Entity Relation Diagram";
   	fontsize=20;
   }
 <% end %>
 
+h4. code:
+
+<% uv( :lang => "dot", :theme => 'twilight') do -%>
+  graph ER {
+  	node [shape=box]; course; institute; student;
+  	node [shape=ellipse]; {node [label="name"] name0; name1; name2;}
+  		code; grade; number;
+  	node [shape=diamond,style=filled,color=lightgrey]; "C-I"; "S-C"; "S-I";
+
+  	name0 -- course;
+  	code -- course;
+  	course -- "C-I" [label="n",len=1.00];
+  	"C-I" -- institute [label="1",len=1.00];
+  	institute -- name1;
+  	institute -- "S-I" [label="1",len=1.00];
+  	"S-I" -- student [label="n",len=1.00];
+  	student -- grade;
+  	student -- name2;
+  	student -- number;
+  	student -- "S-C" [label="m",len=1.00];
+  	"S-C" -- course [label="n",len=1.00];
+
+  	label = "Entity Relation Diagram";
+  	fontsize=20;
+  }<% end %>
 
 
 "Source":http://github.com/newtonapple/newtonapple.github.com/tree/master
