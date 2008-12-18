@@ -21,11 +21,6 @@ module BreadcrumbsHelper
     html << "\n</ul>\n"
     html
   end
-  
-  def content_for( slot )
-    self.instance_variable_set "@slot", yield
-  end
-  
 end  # module Breadcrumbs
 
 Webby::Helpers.register(BreadcrumbsHelper)

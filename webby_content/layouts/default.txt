@@ -5,26 +5,35 @@ filter:    erb
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang='en_us' xml:lang='en_us' xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title><%= @page.title %></title>
-   <meta name="author" content="<%= @page.author %>" />
+  <title>Code Wiki</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link charset='utf-8' href='css/boilerplate/screen.css' media='screen' rel='stylesheet' type='text/css' />
+  <link charset='utf-8' href='css/boilerplate/print.css'  media='print'  rel='stylesheet' type='text/css' />
+  <!--[if lte IE 6]> 
+      <link charset='utf-8' href='css/boilerplate/lib/ie.css' media='screen' rel='stylesheet' type='text/css' />
+  <![endif]-->
+  <link charset='utf-8' href='css/main.css' media='screen' rel='stylesheet' type='text/css' />
 
-   <link rel="stylesheet" href="css/coderay.css" type="text/css" />
-   <link rel="stylesheet" href="css/twilight.css" type="text/css" />
-   <link rel="stylesheet" href="css/site.css" type="text/css" media="screen, projection" />
+  <link charset='utf-8' href='css/code_themes/coderay.css' media='screen, print' rel='stylesheet' type='text/css' />
+  <link charset='utf-8' href='css/code_themes/twilight.css' media='screen, print' rel='stylesheet' type='text/css' />
 </head>
+
 <body>
+  <div class='wrapper'>
+    <div class='header'><%= @header %></div>
 
-<div class="container">
-    <%= @content %>
+    <div class='content'>
+      <%= @content %>
+    </div>
 
-   <div id="footer">
-     <hr />
-     <p>This website was created with <a href="http://webby.rubyforge.org">Webby</a></p>
-   </div>
+    <div class='footer'> 
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">
+        <img alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png" />
+      </a>
+    </div>
+  </div>
 
-</div>
 </body>
 </html>
