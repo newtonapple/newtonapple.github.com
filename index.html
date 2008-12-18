@@ -1,22 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang='en_us' xml:lang='en_us' xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title>Git Source?</title>
-   <meta name="author" content="" />
+  <title>Code Wiki</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link charset='utf-8' href='css/boilerplate/screen.css' media='screen' rel='stylesheet' type='text/css' />
+  <link charset='utf-8' href='css/boilerplate/print.css'  media='print'  rel='stylesheet' type='text/css' />
+  <!--[if lte IE 6]> 
+      <link charset='utf-8' href='css/boilerplate/lib/ie.css' media='screen' rel='stylesheet' type='text/css' />
+  <![endif]-->
+  <link charset='utf-8' href='css/main.css' media='screen' rel='stylesheet' type='text/css' />
 
-   <link rel="stylesheet" href="css/coderay.css" type="text/css" />
-   <link rel="stylesheet" href="css/twilight.css" type="text/css" />
-   <link rel="stylesheet" href="css/site.css" type="text/css" media="screen, projection" />
+  <link charset='utf-8' href='css/code_themes/coderay.css' media='screen, print' rel='stylesheet' type='text/css' />
+  <link charset='utf-8' href='css/code_themes/twilight.css' media='screen, print' rel='stylesheet' type='text/css' />
 </head>
-<body>
 
-<div class="container">
-    <p class="title"><a href="http://github.com/newtonapple/newtonapple.github.com/tree/master">Git Source?</a></p>
+<body>
+  <div class='wrapper'>
+    <div class='header'></div>
+
+    <div class='content'>
+        <h2>Newton&#8217;s Reference</h2>
 <h3><a href="http://webby.rubyforge.org">Webby</a> and git might be a match made in heaven!</h3>
-<h4>Code Ray</h4>
+<h4>Code Ray<br />
+
 <div class="CodeRay"><pre><span class="no"> 1</span> <span class="r">module</span> <span class="cl">Flip</span>; <span class="gv">$KCODE</span> = <span class="s"><span class="dl">&quot;</span><span class="k">u</span><span class="dl">&quot;</span></span>
 <span class="no"> 2</span>    <span class="co">FLIP_MAP</span> = <span class="co">Hash</span>.new{|h,k| k}
 <span class="no"> 3</span>  
@@ -39,7 +47,10 @@
 <span class="no"><strong>20</strong></span>  
 <span class="no">21</span>  
 <span class="no">22</span> <span class="s"><span class="dl">'</span><span class="k">:)</span><span class="dl">'</span></span>.flip <span class="c"># &quot;:(&quot;</span>
-</pre></div><h4>Ultraviolet</h4>
+</pre></div>
+</h4>
+<h4>Ultraviolet<br />
+
 <div class="UltraViolet"><pre class="twilight"><span class="line-numbers">   1 </span> <span class="Keyword">module</span> <span class="Entity">Flip</span>; <span class="Variable"><span class="Variable">$</span>KCODE</span> <span class="Keyword">=</span> <span class="String"><span class="String">&quot;</span>u<span class="String">&quot;</span></span>
 <span class="line-numbers">   2 </span>    <span class="Variable">FLIP_MAP</span> <span class="Keyword">=</span> <span class="Support">Hash</span>.<span class="Entity">new</span>{|<span class="Variable">h</span>,<span class="Variable">k</span>| k}
 <span class="line-numbers">   3 </span>  
@@ -63,12 +74,44 @@
 <span class="line-numbers">  21 </span>  
 <span class="line-numbers">  22 </span> <span class="String"><span class="String">'</span>:)<span class="String">'</span></span>.<span class="Entity">flip</span> <span class="Comment"><span class="Comment">#</span> &quot;:(&quot;</span>
 </pre></div>
+</h4>
+<h4>Graphiz</h4>
+<h5>Directed Graphs<br />
 
-   <div id="footer">
-     <hr />
-     <p>This website was created with <a href="http://webby.rubyforge.org">Webby</a></p>
-   </div>
+<img src="/images/abc.png" usemap="#abc" />
+<map id="abc" name="abc">
+<area shape="poly" href="a.html" title="a" alt="" coords="91,30 92,37 98,44 106,49 116,52 127,54 138,52 148,49 156,44 161,37 163,30 161,22 156,16 148,10 138,7 127,6 116,7 106,10 98,16 92,22"/>
+<area shape="poly" href="b.html" title="b" alt="" coords="5,126 7,133 12,140 20,145 30,148 41,150 52,148 62,145 70,140 76,133 77,126 76,118 70,112 62,106 52,103 41,102 30,103 20,106 12,112 7,118"/>
+<area shape="poly" href="c.html" title="c" alt="" coords="91,222 92,229 98,236 106,241 116,244 127,246 138,244 148,241 156,236 161,229 163,222 161,214 156,208 148,202 138,199 127,198 116,199 106,202 98,208 92,214"/>
+<area shape="rect" href="default.html" alt="" coords="0,0,168,251"/>
+<br />
+<img src="/images/abc.png" usemap="#abc" /><br />
+<map id="abc" name="abc"><br />
+<area shape="poly" href="a.html" title="a" alt="" coords="91,30 92,37 98,44 106,49 116,52 127,54 138,52 148,49 156,44 161,37 163,30 161,22 156,16 148,10 138,7 127,6 116,7 106,10 98,16 92,22"/><br />
+<area shape="poly" href="b.html" title="b" alt="" coords="5,126 7,133 12,140 20,145 30,148 41,150 52,148 62,145 70,140 76,133 77,126 76,118 70,112 62,106 52,103 41,102 30,103 20,106 12,112 7,118"/><br />
+<area shape="poly" href="c.html" title="c" alt="" coords="91,222 92,229 98,236 106,241 116,244 127,246 138,244 148,241 156,236 161,229 163,222 161,214 156,208 148,202 138,199 127,198 116,199 106,202 98,208 92,214"/><br />
+<area shape="rect" href="default.html" alt="" coords="0,0,168,251"/><br />
+</map></h5>
+<p></notextile></p>
+<img src="/images/G.png" /><h5>Struct<br />
 
-</div>
+<br />
+<img src="/images/structs.png" /></h5>
+<p></notextile></p>
+<h5>Entity-Relation Map<br />
+
+<br />
+<img src="/images/ER.png" /></h5>
+<p></notextile></p>
+<p><a href="http://github.com/newtonapple/newtonapple.github.com/tree/master">Source</a></p>
+    </div>
+
+    <div class='footer'> 
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/us/">
+        <img alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png" />
+      </a>
+    </div>
+  </div>
+
 </body>
 </html>
